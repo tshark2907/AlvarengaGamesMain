@@ -1,0 +1,160 @@
+body{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Dosis',sans-serif;
+}
+header{
+    height: 15vh;
+    background-color: blue;
+    width: 100vw;
+    position: relative;
+}
+#sandwich{
+    width: 50px;
+    height: 50px;
+    border:1px solid white;
+    position: absolute;
+    top: 20%;
+}
+#logo{
+    width: 100px;
+    left: 5%;
+    position: absolute;
+}
+#sandwich{
+    right: 5%;
+}
+footer{
+    display: block;
+    background-color: blue;
+    height: 5vh;
+    text-align: center;
+    color: white;
+}
+nav ul{
+    height: 10vh;
+    display: flex;
+    margin: 50px 0;
+    background-color: blue;
+    justify-content: space-around;
+    color: white;
+    position: relative;
+    list-style: none;
+}
+nav ul li{
+    margin-top: 25px;
+}
+nav ul li a{
+    text-decoration: none;
+    padding: 20px;
+    white-space: nowrap;
+}
+nav ul li a:hover{
+    background-color: white;
+    color: blue;
+}
+.banner_area{
+    width: 80vw;
+    min-height: 120px;
+    aspect-ratio: 10/2;
+    margin: 50px auto 50px auto;
+    overflow: hidden;
+    position: relative;
+    border: 1px solid red;
+}
+.banner_area:hover{
+    transform: scale(1.01);
+}
+#banner_back,#banner_next{
+    width: 10%;
+    height: 100%;
+    top:0;
+    border: 1px solid green;
+    position: absolute;
+    text-align: center;
+    cursor: pointer;
+}
+#banner_next{
+    right:0;
+}
+.sales_area,.playstation_area{
+    background-color: blue;
+    color: white;
+    display: block;
+    padding-top: 40px;
+    padding-left: 30px;
+    height: 10vh;
+}
+.product_area_1,.product_area_2{
+    width: 80vw;
+    height: 30vh;
+    margin:50px auto;
+    background-color: grey;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+}
+#products_to_be_moved_1,#products_to_be_moved_2{
+    display: flex;
+    flex-direction: row;
+    width: 80vw;
+    transition: 0.5s ease-in-out;
+}
+.product{
+    width: 15%;
+    min-width: 150px;
+    height: 90%;
+    margin-top: 10px;
+    margin-left: 20px;
+    flex-shrink: 0;
+    border: 1px solid blue;
+    position: relative;
+}
+.product:hover{
+    transform: scale(1.05);
+    border: 1px solid white;
+}
+#last_product_1,#next_product_1,#last_product_2,#next_product_2{
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    border:1px solid red;
+    top: 40%;
+    cursor: pointer;
+    z-index: 2;
+}
+#last_product_1:hover,#next_product_1:hover,#last_product_2:hover,#next_product_2:hover{
+    border: 1px solid white;
+    transform: scale(1.03);
+}
+#last_product_1,#last_product_2{
+    left: 10px;
+    background-image: url(/Assets/Button_previous.png);
+    
+    background-color: cornflowerblue; /* Set the solid background color */
+    background-image: url(/Assets/Button_previous.png); /* Set the image URL */
+    background-repeat: no-repeat; /* Prevent the image from repeating */        
+    background-position: center; /* Center the image */
+    background-blend-mode: multiply; /* Blend the image with the background color */
+    
+      
+}
+#next_product_1,#next_product_2{
+    right: 10px;
+    background-image: url(/Assets/button_next.png);
+}
+.product_tag{
+    width: 50%;
+    height: 40px;
+    border: 1px solid green;
+    border-radius: 0 0 10px 0;
+}
+.product_name{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 60px;
+    border: 1px solid white;
+}
+
