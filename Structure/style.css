@@ -3,56 +3,49 @@ body{
     margin: 0;
     padding: 0;
     font-family: 'Dosis',sans-serif;
+    overflow-x: hidden;
 }
 header{
     height: 15vh;
-    background-color: blue;
+    background-color: rgb(37, 37, 148);
     width: 100vw;
     position: relative;
 }
-#sandwich{
-    width: 50px;
-    height: 50px;
-    border:1px solid white;
-    position: absolute;
-    top: 20%;
-}
 #logo{
     width: 100px;
-    left: 5%;
+    left: 50px;
     position: absolute;
-}
-#sandwich{
-    right: 5%;
+    cursor: pointer;
 }
 footer{
     display: block;
-    background-color: blue;
+    background-color: rgb(37, 37, 148);
     height: 5vh;
     text-align: center;
     color: white;
 }
-nav ul{
-    height: 10vh;
+.navbar{
+    background-color: rgb(37, 37, 148);
+    margin-top: 50px;
+    height: 80px;
+    display: block;
+}
+.navbar_items_container{
     display: flex;
-    margin: 50px 0;
-    background-color: blue;
     justify-content: space-around;
+}
+.navbar_item{
+    margin-top: 20px;
+    padding: 10px;
+    font-family:'Dosis',sans-serif;
     color: white;
-    position: relative;
-    list-style: none;
-}
-nav ul li{
-    margin-top: 25px;
-}
-nav ul li a{
     text-decoration: none;
-    padding: 20px;
-    white-space: nowrap;
 }
-nav ul li a:hover{
+.navbar_item:hover{
     background-color: white;
-    color: blue;
+    font-weight: bold;
+    color: rgb(37, 37, 148);
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
 .banner_area{
     width: 80vw;
@@ -61,32 +54,53 @@ nav ul li a:hover{
     margin: 50px auto 50px auto;
     overflow: hidden;
     position: relative;
-    border: 1px solid red;
 }
 .banner_area:hover{
     transform: scale(1.01);
 }
 #banner_back,#banner_next{
     width: 10%;
-    height: 100%;
-    top:0;
-    border: 1px solid green;
+    padding: 20% 0 20% 0;
+    top: -50%;
     position: absolute;
     text-align: center;
     cursor: pointer;
 }
+#banner_back{
+    background-image: linear-gradient(to left, rgba(255,0,0,0), rgb(6, 6, 6));
+    position: absolute;
+    z-index: 1;
+}
 #banner_next{
     right:0;
+    background-image: linear-gradient(to right, rgba(255,0,0,0), rgb(6, 6, 6));
+    position: absolute;
+    z-index: 1;
 }
-.sales_area,.playstation_area{
-    background-color: blue;
+.banner_image{
+    max-width: 100%;
+    max-height: 100%;
+    animation: Banner 5s linear infinite;
+}
+@keyframes Banner{
+    0%{
+        transform:translateX(1%)
+    }
+    50%{
+        transform:translateX(0%)
+    }
+    100%{
+        transform:translateX(-2%)
+    }}
+.sales_area,.playstation_area,.xbox_area,.nintendo_area,.gifts_area,.acessories_area,.consoles_area{
+    background-color: rgb(37, 37, 148);
     color: white;
     display: block;
-    padding-top: 40px;
+    padding-top: 50px;
     padding-left: 30px;
     height: 10vh;
 }
-.product_area_1,.product_area_2{
+.product_area_1,.product_area_2,.product_area_3,.product_area_4,.product_area_5,.product_area_6,.product_area_7{
     width: 80vw;
     height: 30vh;
     margin:50px auto;
@@ -95,7 +109,7 @@ nav ul li a:hover{
     overflow: hidden;
     display: flex;
 }
-#products_to_be_moved_1,#products_to_be_moved_2{
+#products_to_be_moved_1,#products_to_be_moved_2,#products_to_be_moved_3,#products_to_be_moved_4,#products_to_be_moved_5,#products_to_be_moved_6,#products_to_be_moved_7{
     display: flex;
     flex-direction: row;
     width: 80vw;
@@ -108,53 +122,99 @@ nav ul li a:hover{
     margin-top: 10px;
     margin-left: 20px;
     flex-shrink: 0;
-    border: 1px solid blue;
+    border: 1px solid grey;
     position: relative;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+.product_image{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index:1;
 }
 .product:hover{
     transform: scale(1.05);
     border: 1px solid white;
 }
-#last_product_1,#next_product_1,#last_product_2,#next_product_2{
+#last_product_1,#next_product_1,#last_product_2,#next_product_2,#last_product_3,#next_product_3,#last_product_4,#next_product_4,#last_product_5,#next_product_5,#last_product_6,#next_product_6,#last_product_7,#next_product_7{
     width: 50px;
     height: 50px;
     position: absolute;
-    border:1px solid red;
+    background-color: cornflowerblue;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
     top: 40%;
     cursor: pointer;
     z-index: 2;
+    display: flex;
+    justify-content: center;
 }
-#last_product_1:hover,#next_product_1:hover,#last_product_2:hover,#next_product_2:hover{
+#last_product_1:hover,#next_product_1:hover,#last_product_2:hover,#next_product_2:hover,#last_product_3:hover,#next_product_3:hover,#last_product_4:hover,#next_product_4:hover,#last_product_5:hover,#next_product_5:hover,#last_product_6:hover,#next_product_6:hover,#last_product_7:hover,#next_product_7:hover{
     border: 1px solid white;
     transform: scale(1.03);
 }
-#last_product_1,#last_product_2{
+#last_product_1,#last_product_2,#last_product_3,#last_product_4,#last_product_5,#last_product_6,#last_product_7{
     left: 10px;
-    background-image: url(/Assets/Button_previous.png);
-    
-    background-color: cornflowerblue; /* Set the solid background color */
-    background-image: url(/Assets/Button_previous.png); /* Set the image URL */
-    background-repeat: no-repeat; /* Prevent the image from repeating */        
-    background-position: center; /* Center the image */
-    background-blend-mode: multiply; /* Blend the image with the background color */
-    
-      
 }
-#next_product_1,#next_product_2{
+#next_product_1,#next_product_2,#next_product_3,#next_product_4,#next_product_5,#next_product_6,#next_product_7{
     right: 10px;
     background-image: url(/Assets/button_next.png);
 }
 .product_tag{
-    width: 50%;
-    height: 40px;
-    border: 1px solid green;
+    width: 40%;
+    position: absolute;
+    height: 30px;
+    background-color: rgb(250, 2, 2);
     border-radius: 0 0 10px 0;
+    text-align: center;
+    z-index:2;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+.product_tag span{
+    color: white;
 }
 .product_name{
     position: absolute;
+    text-align: center;
+    z-index: 3;
     bottom: 0;
     width: 100%;
-    height: 60px;
-    border: 1px solid white;
+    height: 55px;
+    background-color: rgb(205, 194, 194);
 }
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 600,
+  'opsz' 48;
+  color: white;
+}
+.sandwich_container{
+    position: relative;
+}
+#sandwich{
+    border-radius: 0%;
+    color: white;
+    cursor: pointer;
+    position: absolute;
+    right: 60px;
+    top: 40px;
+    transform: scale(1.5);
+}
+#sandwich:hover{
+    background-color: white;
+    color: rgb(37, 37, 148);
+}
+#left_button,#right_button{
+   transform: translateY(25%);
+   user-select: none;
+}
+#right_button_banner,#left_button_banner{
+    transform: translateY(-50%, -50%);
+    position: absolute;
+    user-select: none;
+}
+
 
