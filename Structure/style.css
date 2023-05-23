@@ -271,7 +271,77 @@ footer{
     top: 10%;
     left: 25%;
 }
-
+.popup_product{
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.8);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 5;
+}
+.popup_product_container{
+    width: 100%;
+    max-width: 1100px;
+    height: 100vh;
+    max-height: 700px;
+    border: 1px solid red;
+    background-color: white;
+    position: fixed;
+    margin: 0 auto;
+    
+}
+.popup_product_title{
+   font-size: 2rem;
+   padding: 20px;
+   background-color: blue;
+   color: white;
+   border: 1px solid green;
+   position: absolute;
+   left: 45%;
+   top: 5%;
+}
+.popup_product_exit{
+    width: 50px;
+    height: 50px;
+    background-color: rgb(236, 75, 75);
+    border-radius: 10px;
+    position: absolute;
+    right: 5%;
+    top: 5%;
+}
+.popup_product_displayer{
+    width: 50%;
+    height:60%;
+    position: absolute;
+    top: 20%;
+    left: 5%;
+    background-color: grey;
+}
+.popup_product_description{
+    width: 35%;
+    height: 60%;
+    position: absolute;
+    top: 20%;
+    right: 5%;
+    background-color: grey;
+}
+.popup_product_price{
+    width: 150px;
+    height: 60px;
+    border: 1px solid blue;
+    position: absolute;
+    bottom: 5%;
+    left: 15%;
+}
+.popup_product_buy{
+    width: 150px;
+    height: 60px;
+    background-color: blue;
+    position: absolute;
+    bottom: 5%;
+    left: 50%;
+}
 .popup_last_image{
     left: 10px;
 }
