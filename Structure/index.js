@@ -26,6 +26,8 @@ const lastProduct5 = document.querySelector('#last_product_5');
 const lastProduct6 = document.querySelector('#last_product_6');
 const lastProduct7 = document.querySelector('#last_product_7');
 
+const popup_images = document.getElementsByClassName('popup_image');
+
 let productSize = 200;
 
 let currentItem = 0;
@@ -36,6 +38,8 @@ let currentPosition4 = 0;
 let currentPosition5 = 0;
 let currentPosition6 = 0;
 let currentPosition7 = 0;
+
+let currentPopupImage = 0;
 
 let intervalId;
 
