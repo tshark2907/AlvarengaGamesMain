@@ -296,9 +296,8 @@ footer{
    padding: 20px;
    background-color: blue;
    color: white;
-   border: 1px solid green;
    position: absolute;
-   left: 45%;
+   left: 25%;
    top: 5%;
 }
 .popup_product_exit{
