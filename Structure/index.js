@@ -26,7 +26,11 @@ const lastProduct5 = document.querySelector('#last_product_5');
 const lastProduct6 = document.querySelector('#last_product_6');
 const lastProduct7 = document.querySelector('#last_product_7');
 
-const popup_images = document.getElementsByClassName('popup_image');
+const popup = document.queryselector('#popup');
+const popupExit = document.getElementsByClassName('popup_exit')
+const popupLeftButton = document.querySelector('#left_button_popup')
+const popupRightButton = document.querySelector('#right_button_popup')
+const popupImages = document.querySelector('.popup_image_holder')
 
 let productSize = 200;
 
