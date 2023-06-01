@@ -22,9 +22,23 @@ const lastProduct5 = document.querySelector('#last_product_5');
 const lastProduct6 = document.querySelector('#last_product_6');
 const lastProduct7 = document.querySelector('#last_product_7');
 
+const banners = document.getElementsByClassName('banner_image');
+
+const bannerNext = document.querySelector('#banner_next');
+const bannerLast = document.querySelector('#banner_back');
+
+const popup = document.queryselector('#popup');
+const popupExit = document.getElementsByClassName('popup_exit')
+const popupLeftButton = document.querySelector('#left_button_popup')
+const popupRightButton = document.querySelector('#right_button_popup')
+const popupImages = document.querySelector('.popup_image_holder')
+
+
+
 let productSize = 200;
 
 let currentItem = 0;
+let currentPopup = 0;
 let currentPosition1 = 0;
 let currentPosition2 = 0;
 let currentPosition3 = 0;
@@ -33,39 +47,93 @@ let currentPosition5 = 0;
 let currentPosition6 = 0;
 let currentPosition7 = 0;
 
+const buttons = [nextProduct1,nextProduct2,nextProduct3,nextProduct4,nextProduct5,nextProduct6,nextProduct7
+                ,lastProduct1,lastProduct2,lastProduct3,lastProduct4,lastProduct5,lastProduct6,lastProduct7]
 
-const comandsToHandle = [
-    [nextProduct1,lastProduct1,currentPosition1,products1],
-    [nextProduct2,lastProduct2,currentPosition2,products2],
-    [nextProduct3,lastProduct3,currentPosition3,products3],
-    [nextProduct4,lastProduct4,currentPosition4,products4],
-    [nextProduct5,lastProduct5,currentPosition5,products5],
-    [nextProduct6,lastProduct6,currentPosition6,products6],
-    [nextProduct7,lastProduct7,currentPosition7,products7],
-]
+function handleClickEvents(event){
 
-let clickedElement = event.target;
-
-let indexToHandle = comandsToHandle.findIndex(function(elemento){
-    return elemento == clickedElement
-})
-
-function handleClickEvents(){
-if(clickedElement == comandsToHandle.map([0])){
+    const comandsToHandle = [
+        [nextProduct1,lastProduct1,currentPosition1,products1],
+        [nextProduct2,lastProduct2,currentPosition2,products2],
+        [nextProduct3,lastProduct3,currentPosition3,products3],
+        [nextProduct4,lastProduct4,currentPosition4,products4],
+        [nextProduct5,lastProduct5,currentPosition5,products5],
+        [nextProduct6,lastProduct6,currentPosition6,products6],
+        [nextProduct7,lastProduct7,currentPosition7,products7],
+    ]
     
-    if (comandsToHandle[indexToHandle][2] > -(productSize * (comandsToHandle[indexToHandle][3].childElementCount - 6))) {
-        comandsToHandle[indexToHandle][2] -= productSize;
-        comandsToHandle[indexToHandle][3].style.transform = `translateX(${comandsToHandle[indexToHandle][2]}px)`;
-      }
+    let clickedElement = event.target;
+    let indexToHandle;
 
+    for(let i = 0; i < comandsToHandle.length; i++){
+        for(let j = 0; j < comandsToHandle[i].length; j++){
+            if(clickedElement == comandsToHandle[i][j]){
+                indexToHandle = i;
+                if(j == 0){
+                    advanceProduct(indexToHandle)
+                }
+                if(j == 1){
+                    revertProduct(indexToHandle)
+                }
+            }
+        }
+    }
+    
+function advanceProduct(index){
+    if (comandsToHandle[index][2] > -(productSize * (comandsToHandle[index][3].childElementCount - 6))) {
+        comandsToHandle[index][2] -= productSize;
+         comandsToHandle[index][3].style.transform = `translateX(${comandsToHandle[indexToHandle][2]}px)`;
+        }
+    }    
+     
+function revertProduct(index){
+    if (comandsToHandle[index][2] < 0) {
+        comandsToHandle[index][2] += comandsToHandle[index][3];
+        comandsToHandle[index][3].style.transform = `translateX(${comandsToHandle[indexToHandle][2]}px)`;
+        }
+    }    
 }
-if(clickedElement == comandsToHandle.map([1])){
+              
+function switchBannerFwd() {
+    banners[currentItem].style.display = 'none';
+    currentItem = (currentItem + 1) % banners.length;
+    banners[currentItem].style.display = 'block';
+  }
+  
+  function switchBannerRvs() {
+    banners[currentItem].style.display = 'none';
+    currentItem = (currentItem - 1 + banners.length) % banners.length;
+    banners[currentItem].style.display = 'block';
+  }
 
-    if (comandsToHandle[indexToHandle][2] < 0) {
-        comandsToHandle[indexToHandle][2] += comandsToHandle[indexToHandle][3];
-        comandsToHandle[indexToHandle][3].style.transform = `translateX(${comandsToHandle[indexToHandle][2]}px)`;
-      }
-    };
+  function switchPopupImageFwd() {
+    popupImages[currentPopup].style.display = 'none';
+    currentPopup = (currentPopup + 1) % popupImages.length;
+    popupImages[currentPopup].style.display = 'block';
+  }
 
-}
+  function switchPopupImageRvs() {
+    popupImages[currentPopup].style.display = 'none';
+    currentPopup = (currentPopup - 1 + popupImages.length) % popupImages.length;
+    popupImages[currentPopup].style.display = 'block';
+  }
+
+  bannerNext.addEventListener('click', () => {
+    switchBannerFwd();
+  });
+  
+  bannerLast.addEventListener('click', () => {
+    switchBannerRvs();
+  });
+
+  popupLeftButton.addEventListener('click', () => {
+    switchPopupImageRvs()
+  })
+  popupRightButton.addEventListener('click', () => {
+    switchPopupImageFwd()
+  })
+
+  setInterval(switchBannerFwd,5000);
+
+  buttons.forEach(button => button.addEventListener('click', handleClickEvents));
 
