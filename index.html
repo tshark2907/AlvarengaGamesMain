@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alvarenga Games - Início</title>
+    <link rel="stylesheet" href="/style.css">
+    <script src="/index.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dosis&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
+</head>
+<body>
+    
+    <header>
+        <a src="/Structure/index.html">
+            <img id="logo" src="/Assets/Alvarenga_games_logo.png">
+        </a>
+        <i class="material-symbols-outlined" id="sandwich" onclick="clickMenu()">menu</i>
+    </header>
+
+    <nav class="navbar" id="navbar">            
+        <div class="navbar_items_container">
+            <a class="navbar_item" href="#ps">Jogos</a>
+            <a class="navbar_item" href="#acessories">Periféricos</a>
+            <a class="navbar_item" href="#gifts">Gift Cards</a>
+            <a class="navbar_item" href="#consoles">Consoles</a>
+        </div>
+    </nav>
+
+    <section class="banner_area">
+        <div id="banner_back">
+            <span class="material-symbols-outlined" id="left_button_banner">chevron_left</span>
+        </div>
+        <div class="banner_container">
+            <a href="#xbox"><img src="/Assets/Xbox_banner.png" id="image1" class="banner_image"></a>
+            <a href="#ps"><img src="/Assets/Playstation_banner.png" id="image2" class="banner_image"></a>
+            <a href="#nintendo"><img src="/Assets/Nintendo_banner.jpeg" id="image3" class="banner_image"></a>
+        </div>
+        <div id="banner_next">
+            <span class="material-symbols-outlined" id="right_button_banner">chevron_right</span>
+        </div>
+    </section>
+    
+    <div class="popup_wrapper" id="popup">
+        <div class="popup_product_area">
+            <span class="popup_product_title">Horizon - Zero Dawn Complete Edition PS4</span>
+            <button class="popup_exit"><span class="material-symbols-outlined">
+                close
+                </span></button>
+            <div class="popup_product_display">
+                <div class="popup_last_image"><span class="material-symbols-outlined" id="left_button_popup">chevron_left</span></div>
+                <div class="popup_image_holder">
+                    <img class="popup_image" src="https://s2.glbimg.com/pJkTR6NHSrPTVmgT0UckUi-4tz4=/0x0:695x391/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_08fbf48bc0524877943fe86e43087e7a/internal_photos/bs/2021/A/q/AEBtCcQSWE8tz5WSe9Bw/2016-12-13-3126129-horizonzerodawn-screens-septevent-3840x2160-01-2.jpg">
+                    <img class="popup_image" src="https://i.ytimg.com/vi/sJVHVAUqUdU/maxresdefault.jpg">
+                    <img class="popup_image" src="https://www.mobilebit.com.br/wp-content/uploads/2017/08/Wallpaper-Abyss.jpg">
+                </div>
+                <div class="popup_next_image"><span class="material-symbols-outlined" id="right_button_popup">chevron_right</span></div>
+            </div>
+            <div class="popup_product_description">
+                <p>Antes de desbravar o Oeste Proibido, reveja a história épica de Aloy, a caçadora de máquinas, em Horizon Zero Dawn. Ela se passa em um mundo pós-apocalíptico onde a natureza retomou as ruínas do Velho Mundo e máquinas colossais dominam os ermos verdejantes.<br><br>Pacote digital contém versão padrão do jogo, conteúdo bonus de concept arts do mundo de Zero Dawn, e a exclusiva DLC Frozen Wilds.</p>
+            </div>
+            <div class="popup_product_purchase">
+                <span class="popup_product_price"><span>R$ 149,99</span></span>
+                <button class="popup_product_buy"><span>Comprar</span></button>
+            </div>
+        </div>
+    
+    </div>
+    <section>
+        <span class="sales_area">Promoções da Semana</span>
+
+        <div class="product_area_1">
+
+            <div id="last_product_1">
+                <span class="material-symbols-outlined" id="left_button">chevron_left</span>
+            </div>
+            <div id="next_product_1">
+                <span class="material-symbols-outlined" id="right_button">chevron_right</span>
+            </div>
+
+            <div id="products_to_be_moved_1">
+
+                <div class="product">
+                    <div class="product_tag"><span>- 30%!</span></div>
+                    <img class="product_image" src="https://sm.ign.com/ign_br/game/h/horizon-ze/horizon-zero-dawn-1_xv24.jpg" alt="Horizon Zero Dawn">
+                    <div class="product_name"><span>Horizon: Zero Dawn PS4 <br>R$ 150</span></div>
+                </div>
+
+                <div class="product">
+                    <div class="product_tag"><span>Novo!</span></div>
+                    <img class="product_image" src="data:image/jpeg;base64,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" alt="Diablo 4">
+                    <div class="product_name"><span>Diablo 4 PS4<br>R$ 399</span></div>
+                </div>
+
+                <div class="product">
+                    <div class="product_tag"><span>-20%</span></div>
+                    <img class="product_image" src="data:image/jpeg;base64,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" alt="Bloodborne">
+                    <div class="product_name">Bloodborne PS4 <br> R$ 149,99</div>
+                </div>
+
+                <div class="product">
+                    <div class="product_tag"><span>-10%</span></div>
+                    <img class="product_image" src="https://m.media-amazon.com/images/I/61SLxJgGV-L._AC_UF1000,1000_QL80_.jpg" alt="GT7">
+                    <div class="product_name">Gran Turismo 7 PS4 <br> R$ 399</div>
+                </div>
+
+                <div class="product">
+                    <div class="product_tag"></div>
+                    <img class="product_image" src="" alt="">
+                    <div class="product_name"></div>
+                </div>
+
+                <div class="product">
+                    <div class="product_tag"></div>
+                    <img class="product_image" src="" alt="">
+                    <div class="product_name"></div>
+                </div>
+
+                <div class="product">
+                    <div class="product_tag"></div>
+                    <img class="product_image" src="" alt="">
+                    <div class="product_name"></div>
+                </div>
+
+                <div class="product">
+                    <div class="product_tag"></div>
+                    <img class="product_image" src="" alt="">
+                    <div class="product_name"></div>
+                </div>
+
+                <div class="product">
+                    <div class="product_tag"></div>
+                    <img class="product_image" src="" alt="">
+                    <div class="product_name"></div>
+                </div>
+
+                <div class="product">
+                    <div class="product_tag"></div>
+                    <img class="product_image" src="" alt="">
+                    <div class="product_name"></div>
+                </div>
+
+                <div class="product">
+                    <div class="product_tag"></div>
+                    <img class="product_image" src="" alt="">
+                    <div class="product_name"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <span id="ps" class="playstation_area">Jogos Playstation</span>
+
+        <div class="product_area_2">
+
+            <div id="last_product_2">
+                <span class="material-symbols-outlined left_button">chevron_left</span>
+            </div>
+            <div id="next_product_2">
+                <span class="material-symbols-outlined right_button">chevron_right</span>
+            </div>
+
+            <div id="products_to_be_moved_2">
+
+                <div class="product">
+                    <div class="product_tag"></div>
+                    <img class="product_image" src="" alt="">
+                    <div class="product_name"></div>
+                </div>
+
+                <div class="product">
+                    <div class="product_tag"></div>
+                    <img class="product_image" src="" alt="">
+                    <div class="product_name"></div>
+                </div>
+
+                <div class="product">
+                    <div class="product_tag"></div>
+                    <img class="product_image" src="" alt="">
+                    <div class="product_name"></div>
+                </div>
+
+                <div class="product">
+                    <div class="product_tag"></div>
+                    <img class="product_image" src="" alt="">
+                    <div class="product_name"></div>
+                </div>
+
+                <div class="product">
+                    <div class="product_tag"></div>
+                    <img class="product_image" src="" alt="">
+                    <div class="product_name"></div>
+                </div>
+
+                <div class="product">
+                    <div class="product_tag"></div>
+                    <img class="product_image" src="" alt="">
+                    <div class="product_name"></div>
+                </div>
+
+                <div class="product">
+                    <div class="product_tag"></div>
+                    <img class="product_image" src="" alt="">
+                    <div class="product_name"></div>
+                </div>
+
+                <div class="product">
+                    <div class="product_tag"></div>
+                    <img class="product_image" src="" alt="">
+                    <div class="product_name"></div>
+                </div>
+
+                <div class="product">
+                    <div class="product_tag"></div>
+                    <img class="product_image" src="" alt="">
+                    <div class="product_name"></div>
+             </div>
+
+                <div class="product">
+                    <div class="product_tag"></div>
+                    <img class="product_image" src="" alt="">
+                    <div class="product_name"></div>
+                </div>
+
+                <div class="product">
+                    <div class="product_tag"></div>
+                    <img class="product_image" src="" alt="">
+                    <div class="product_name"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <span id="xbox" class="xbox_area">Jogos Xbox</span>
+
+        <div class="product_area_3">
+
+            <div id="last_product_3">
+                <span class="material-symbols-outlined left_button">chevron_left</span>
+            </div>
+            <div id="next_product_3">
+                <span class="material-symbols-outlined right_button">chevron_right</span>
+            </div>
+
+            <div id="products_to_be_moved_3">
+
+                <div class="product">
+                    <div class="product_tag"></div>
+                    <img class="product_image" src="" alt="">
+                    <div class="product_name"></div>
+                </div>
+
+                <div class="product">
+                    <div class="product_tag"></div>
+                    <img class="product_image" src="" alt="">
+                    <div class="product_name"></div>
+                </div>
+
+                <div class="product">
+                    <div class="product_tag"></div>
+                    <img class="product_image" src="" alt="">
+                    <div class="product_name"></div>
+                </div>
+
+                <div class="product">
+                    <div class="product_tag"></div>
+                    <img class="product_image" src="" alt="">
+                    <div class="product_name"></div>
+                </div>
+
+                <div class="product">
+                    <div class="product_tag"></div>
+                    <img class="product_image" src="" alt="">
+                    <div class="product_name"></div>
+                </div>
+
+                <div class="product">
+                    <div class="product_tag"></div>
+                    <img class="product_image" src="" alt="">
+                    <div class="product_name"></div>
+                </div>
+
+                <div class="product">
+                    <div class="product_tag"></div>
+                    <img class="product_image" src="" alt="">
+                    <div class="product_name"></div>
+                </div>
+
+                <div class="product">
+                    <div class="product_tag"></div>
+                    <img class="product_image" src="" alt="">
+                    <div class="product_name"></div>
+                </div>
+
+                <div class="product">
+                    <div class="product_tag"></div>
+                    <img class="product_image" src="" alt="">
+                    <div class="product_name"></div>
+             </div>
+
+                <div class="product">
+                    <div class="product_tag"></div>
+                    <img class="product_image" src="" alt="">
+                    <div class="product_name"></div>
+                </div>
+
+                <div class="product">
+                    <div class="product_tag"></div>
+                    <img class="product_image" src="" alt="">
+                    <div class="product_name"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <span id="nintendo" class="nintendo_area">Jogos Nintendo</span>
+
+        <div class="product_area_4">
+
+            <div id="last_product_4">
+                <span class="material-symbols-outlined left_button">chevron_left</span>
+            </div>
+            <div id="next_product_4">
+                <span class="material-symbols-outlined right_button">chevron_right</span>
+            </div>
+
+            <div id="products_to_be_moved_4">
+
+                <div class="product">
+                    <div class="product_tag"></div>
+                    <img class="product_image" src="" alt="">
+                    <div class="product_name"></div>
+                </div>
+
+                <div class="product">
+                    <div class="product_tag"></div>
+                    <img class="product_image" src="" alt="">
+                    <div class="product_name"></div>
+                </div>
+
+                <div class="product">
+                    <div class="product_tag"></div>
+                    <img class="product_image" src="" alt="">
+                    <div class="product_name"></div>
+                </div>
+
+                <div class="product">
+                    <div class="product_tag"></div>
+                    <img class="product_image" src="" alt="">
+                    <div class="product_name"></div>
+                </div>
+
+                <div class="product">
+                    <div class="product_tag"></div>
+                    <img class="product_image" src="" alt="">
+                    <div class="product_name"></div>
+                </div>
+
+                <div class="product">
+                    <div class="product_tag"></div>
+                    <img class="product_image" src="" alt="">
+                    <div class="product_name"></div>
+                </div>
+
+                <div class="product">
+                    <div class="product_tag"></div>
+                    <img class="product_image" src="" alt="">
+                    <div class="product_name"></div>
+                </div>
+
+                <div class="product">
+                    <div class="product_tag"></div>
+                    <img class="product_image" src="" alt="">
+                    <div class="product_name"></div>
+                </div>
+
+                <div class="product">
+                    <div class="product_tag"></div>
+                    <img class="product_image" src="" alt="">
+                    <div class="product_name"></div>
+             </div>
+
+                <div class="product">
+                    <div class="product_tag"></div>
+                    <img class="product_image" src="" alt="">
+                    <div class="product_name"></div>
+                </div>
+
+                <div class="product">
+                    <div class="product_tag"></div>
+                    <img class="product_image" src="" alt="">
+                    <div class="product_name"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <span id="acessories" class="acessories_area">Periféricos</span>
+
+        <div class="product_area_5">
+
+            <div id="last_product_5">
+                <span class="material-symbols-outlined left_button">chevron_left</span>
+            </div>
+            <div id="next_product_5">
+                <span class="material-symbols-outlined right_button">chevron_right</span>
+            </div>
+
+            <div id="products_to_be_moved_5">
+
+                <div class="product">
+                    <div class="product_tag"></div>
+                    <img class="product_image" src="" alt="">
+                    <div class="product_name"></div>
+                </div>
+
+                <div class="product">
+                    <div class="product_tag"></div>
+                    <img class="product_image" src="" alt="">
+                    <div class="product_name"></div>
+                </div>
+
+                <div class="product">
+                    <div class="product_tag"></div>
+                    <img class="product_image" src="" alt="">
+                    <div class="product_name"></div>
+                </div>
+
+                <div class="product">
+                    <div class="product_tag"></div>
+                    <img class="product_image" src="" alt="">
+                    <div class="product_name"></div>
+                </div>
+
+                <div class="product">
+                    <div class="product_tag"></div>
+                    <img class="product_image" src="" alt="">
+                    <div class="product_name"></div>
+                </div>
+
+                <div class="product">
+                    <div class="product_tag"></div>
+                    <img class="product_image" src="" alt="">
+                    <div class="product_name"></div>
+                </div>
+
+                <div class="product">
+                    <div class="product_tag"></div>
+                    <img class="product_image" src="" alt="">
+                    <div class="product_name"></div>
+                </div>
+
+                <div class="product">
+                    <div class="product_tag"></div>
+                    <img class="product_image" src="" alt="">
+                    <div class="product_name"></div>
+                </div>
+
+                <div class="product">
+                    <div class="product_tag"></div>
+                    <img class="product_image" src="" alt="">
+                    <div class="product_name"></div>
+             </div>
+
+                <div class="product">
+                    <div class="product_tag"></div>
+                    <img class="product_image" src="" alt="">
+                    <div class="product_name"></div>
+                </div>
+
+                <div class="product">
+                    <div class="product_tag"></div>
+                    <img class="product_image" src="" alt="">
+                    <div class="product_name"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <span id="gifts" class="gifts_area">Gift Cards</span>
+
+        <div class="product_area_6">
+
+            <div id="last_product_6">
+                <span class="material-symbols-outlined left_button">chevron_left</span>
+            </div>
+            <div id="next_product_6">
+                <span class="material-symbols-outlined right_button">chevron_right</span>
+            </div>
+
+            <div id="products_to_be_moved_6">
+
+                <div class="product">
+                    <div class="product_tag"></div>
+                    <img class="product_image" src="" alt="">
+                    <div class="product_name"></div>
+                </div>
+
+                <div class="product">
+                    <div class="product_tag"></div>
+                    <img class="product_image" src="" alt="">
+                    <div class="product_name"></div>
+                </div>
+
+                <div class="product">
+                    <div class="product_tag"></div>
+                    <img class="product_image" src="" alt="">
+                    <div class="product_name"></div>
+                </div>
+
+                <div class="product">
+                    <div class="product_tag"></div>
+                    <img class="product_image" src="" alt="">
+                    <div class="product_name"></div>
+                </div>
+
+                <div class="product">
+                    <div class="product_tag"></div>
+                    <img class="product_image" src="" alt="">
+                    <div class="product_name"></div>
+                </div>
+
+                <div class="product">
+                    <div class="product_tag"></div>
+                    <img class="product_image" src="" alt="">
+                    <div class="product_name"></div>
+                </div>
+
+                <div class="product">
+                    <div class="product_tag"></div>
+                    <img class="product_image" src="" alt="">
+                    <div class="product_name"></div>
+                </div>
+
+                <div class="product">
+                    <div class="product_tag"></div>
+                    <img class="product_image" src="" alt="">
+                    <div class="product_name"></div>
+                </div>
+
+                <div class="product">
+                    <div class="product_tag"></div>
+                    <img class="product_image" src="" alt="">
+                    <div class="product_name"></div>
+             </div>
+
+                <div class="product">
+                    <div class="product_tag"></div>
+                    <img class="product_image" src="" alt="">
+                    <div class="product_name"></div>
+                </div>
+
+                <div class="product">
+                    <div class="product_tag"></div>
+                    <img class="product_image" src="" alt="">
+                    <div class="product_name"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <span id="consoles" class="consoles_area">Consoles</span>
+
+        <div class="product_area_7">
+
+            <div id="last_product_7">
+                <span class="material-symbols-outlined left_button">chevron_left</span>
+            </div>
+            <div id="next_product_7">
+                <span class="material-symbols-outlined right_button">chevron_right</span>
+            </div>
+
+            <div id="products_to_be_moved_7">
+
+                <div class="product">
+                    <div class="product_tag"></div>
+                    <img class="product_image" src="" alt="">
+                    <div class="product_name"></div>
+                </div>
+
+                <div class="product">
+                    <div class="product_tag"></div>
+                    <img class="product_image" src="" alt="">
+                    <div class="product_name"></div>
+                </div>
+
+                <div class="product">
+                    <div class="product_tag"></div>
+                    <img class="product_image" src="" alt="">
+                    <div class="product_name"></div>
+                </div>
+
+                <div class="product">
+                    <div class="product_tag"></div>
+                    <img class="product_image" src="" alt="">
+                    <div class="product_name"></div>
+                </div>
+
+                <div class="product">
+                    <div class="product_tag"></div>
+                    <img class="product_image" src="" alt="">
+                    <div class="product_name"></div>
+                </div>
+
+                <div class="product">
+                    <div class="product_tag"></div>
+                    <img class="product_image" src="" alt="">
+                    <div class="product_name"></div>
+                </div>
+
+                <div class="product">
+                    <div class="product_tag"></div>
+                    <img class="product_image" src="" alt="">
+                    <div class="product_name"></div>
+                </div>
+
+                <div class="product">
+                    <div class="product_tag"></div>
+                    <img class="product_image" src="" alt="">
+                    <div class="product_name"></div>
+                </div>
+
+                <div class="product">
+                    <div class="product_tag"></div>
+                    <img class="product_image" src="" alt="">
+                    <div class="product_name"></div>
+             </div>
+
+                <div class="product">
+                    <div class="product_tag"></div>
+                    <img class="product_image" src="" alt="">
+                    <div class="product_name"></div>
+                </div>
+
+                <div class="product">
+                    <div class="product_tag"></div>
+                    <img class="product_image" src="" alt="">
+                    <div class="product_name"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <span>Página criada como exercício para portfolio</span>
+    </footer>
+    <script>
+        function clickMenu(){
+            if(navbar.style.display == 'none'){
+                navbar.style.display = 'block'
+            } else {
+                navbar.style.display = 'none'
+            }
+        }
+    </script>
+</body>
+</html>

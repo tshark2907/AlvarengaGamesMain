@@ -207,7 +207,7 @@ footer{
     background-color: white;
     color: rgb(37, 37, 148);
 }
-#left_button,#right_button{
+.left_button,.right_button{
    transform: translateY(25%);
    user-select: none;
 }
@@ -221,6 +221,7 @@ footer{
     height: 100vh;
     background-color: rgba(0, 0, 0, 0.8);
     position:fixed;
+    display: none;
     top: 0;
     left: 0;
     z-index: 6;
